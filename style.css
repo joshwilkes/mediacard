@@ -1,0 +1,57 @@
+*, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 85%;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.cards-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .5rem;
+}
+
+/*-- MEDIA QUERIES FOR RESPONSIVE DESIGN --*/
+@media screen and (min-width: 550px) {  /*-- for screens above 550px  --*/
+  .cards-item {width: 50%;} /*-- sets card width to half of the page --*/
+}
+@media screen and (min-width: 1024px) { /*-- for screens above 1024px  --*/
+  .cards-item {width: 33.33333%;} /*-- sets card width to one-third of the page --*/
+}
+@media screen and (min-width: 1280px) { /*-- for screens above 1280px  --*/
+  .cards-item {width: 25%;} /*-- sets card width to one-quarter of the page --*/
+}
+
+.card {
+    background: gray; /* placeholder */
+}
+
+.card-image {
+    width: 100%; /*placeholder*/
+}
+
+.card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card-title {
+
+}
+
+.card-text {
+
+}
+
+.card-btn {
+
+}
