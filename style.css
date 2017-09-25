@@ -5,6 +5,7 @@
 body {
     width: 85%;
     margin: 0 auto;
+    font-family: 'Droid Sans', sans-serif;
 }
 .container {
     display: flex;
@@ -30,11 +31,31 @@ body {
 }
 
 .card {
-    background: gray; /* placeholder */
+    /*background: gray;  placeholder */
+    border: 1px solid #dadada;
+    transition: all 0.2s ease;
+    animation: down-bump 0.4s ease;
+}
+
+.card:hover {
+    animation: up-bump 0.4s ease;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
 }
 
 .card-image {
-    width: 100%; /*placeholder*/
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 60%;  /*-- for 16:9 aspect ratio --*/
 }
 
 .card-content {
@@ -45,13 +66,72 @@ body {
 }
 
 .card-title {
-
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    font-weight: 150%;
 }
 
 .card-text {
-
+    font-weight: 400;
+    text-align: center;
 }
 
 .card-btn {
+    padding: .5rem;
+    background: gray;
+    border: darkgray;
+    border-radius: 4px;
+}
 
+.card-btn:active {
+    border: 2px solid skyblue;
+}
+
+.random1 {
+  background-image: url('https://unsplash.it/800/600/?image=1062');
+}
+
+.random2 {
+  background-image: url('https://unsplash.it/800/600/?image=1058');
+}
+
+.random3 {
+  background-image: url('https://unsplash.it/800/600/?image=1040');
+}
+
+.random4 {
+  background-image: url('https://unsplash.it/800/600/?image=1020');
+}
+
+.random5 {
+  background-image: url('https://unsplash.it/800/600/?image=999');
+}
+
+.random6 {
+  background-image: url('https://unsplash.it/800/600/?image=980');
+}
+
+.random7 {
+  background-image: url('https://unsplash.it/800/600/?image=977');
+}
+
+.random8 {
+  background-image: url('https://unsplash.it/800/600/?image=965');
+}
+
+.random9 {
+  background-image: url('https://unsplash.it/800/600/?image=961');
+}
+
+.random10 {
+  background-image: url('https://unsplash.it/800/600/?image=890');
+}
+
+.random11 {
+  background-image: url('https://unsplash.it/800/600/?image=928');
+}
+
+.random12 {
+  background-image: url('https://unsplash.it/800/600/?image=935');
 }
