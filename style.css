@@ -6,6 +6,7 @@ body {
     width: 85%;
     margin: 0 auto;
     font-family: 'Droid Sans', sans-serif;
+    background: #eef2f7;
 }
 .container {
     display: flex;
@@ -42,19 +43,22 @@ header::after {
 }
 
 .card {
-    /*background: gray;  placeholder */
+    background: #dae3f2;
     border: 1px solid #dadada;
+    border-radius: 25px;
 }
 
-.card:hover .card-image {
-  filter: blur(0px);
+.card:hover  {
+  /*filter: blur(0px);  blur effect worked but was distractive */
+  box-shadow: 4px 4px  2.5px lightgrey;
 }
 
 .card-image {
     background-size: cover;
     background-position: center center;
-    padding-bottom: 60%;  /*-- for 16:9 aspect ratio --*/
-    filter: blur(5px);
+    padding-bottom: 60%;
+    /*filter: blur(5px); blur effect worked but was distractive */
+    border-radius: 25px 25px 0px 0px;
 }
 
 .card-content {
@@ -81,7 +85,13 @@ header::after {
     border: darkgray;
     border-radius: 4px;
     background: #87CEEB;
+    border: 2px solid #87CEEB;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+  box-shadow: 2px 2px lightgrey;
 }
 
 .card-btn:active {
