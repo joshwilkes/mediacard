@@ -13,6 +13,17 @@ body {
     flex-direction: row;
 }
 
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .cards-item {
     display: flex;
     flex-direction: column;
@@ -33,29 +44,17 @@ body {
 .card {
     /*background: gray;  placeholder */
     border: 1px solid #dadada;
-    transition: all 0.2s ease;
-    animation: down-bump 0.4s ease;
 }
 
-.card:hover {
-    animation: up-bump 0.4s ease;
-}
-
-@keyframes up-bump {
-  0% { padding-top: 2em; }
-  50% { padding-top: 1.5em; }
-  100% { padding-top: 2em; }
-}
-@keyframes down-bump {
-  0% { padding-top: 2em; }
-  50% { padding-top: 2.5em; }
-  100% { padding-top: 2em; }
+.card:hover .card-image {
+  filter: blur(0px);
 }
 
 .card-image {
     background-size: cover;
     background-position: center center;
     padding-bottom: 60%;  /*-- for 16:9 aspect ratio --*/
+    filter: blur(5px);
 }
 
 .card-content {
@@ -69,7 +68,6 @@ body {
     margin-bottom: 0;
     font-weight: 700;
     text-align: center;
-    font-weight: 150%;
 }
 
 .card-text {
@@ -82,10 +80,23 @@ body {
     background: gray;
     border: darkgray;
     border-radius: 4px;
+    background: #87CEEB;
+    font-weight: 700;
 }
 
 .card-btn:active {
-    border: 2px solid skyblue;
+    border: 2px solid #54BFE9;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+footer::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .random1 {
